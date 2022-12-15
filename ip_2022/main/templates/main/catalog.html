@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>Каталог</h1>
+{% endblock%}
+
+{% block content %}
+<div class="features">
+    <h1 class="display-1">Каталог</h1>
+    <img src="static/main/img/vecher.jpg" class="img-fluid">
+    <br>
+    <div class="d-grid gap-2 d-md-block">
+        <a href="{% url 'panely_pvh' %}"><button class="btn btn-primary btn-lg" type="button">Панели ПВХ</button></a>
+        <a href="{% url 'ugly' %}"><button class="btn btn-primary btn-lg" type="button">Углы ПВХ</button></a>
+        <a href="{% url 'krasky' %}"><button class="btn btn-primary btn-lg" type="button">Краски ВД и Эмали</button></a>
+    </div>
+</div>
+{% endblock %}

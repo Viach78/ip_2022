@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ ugolky.title }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1 class="display-3">Уголки ПВХ</h1>
+    <div class="wrapper">
+        {% for elem in data_1 %}
+            <div class="alert alert-warning">
+                <h4 class="row d-block"> {{ elem.title }} </h4>
+                <a href="{% url 'ugol_detail' elem.id %}" class="btn btn-info">Подробнее</a>
+            </div>
+        {% endfor%}
+    </div>
+    <a href="{% url 'catalog' %}"><button class="btn btn-outline-primary">В каталог</button></a>
+
+</div>
+
+{% endblock%}

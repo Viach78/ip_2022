@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ krasky_rust.title }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h2>{{ krasky_rust.title }}</h2>
+        <img src="{% static krasky_rust.image %}" alt="" width="15%">
+        <h5>{{ krasky_rust.description}}</h5>
+        <h2>{{ krasky_rust.price }}</h2>
+        <a href="{% url 'krasky_rust' %}" class="btn btn-outline-primary">Назад</a>
+    </div>
+{% endblock%}

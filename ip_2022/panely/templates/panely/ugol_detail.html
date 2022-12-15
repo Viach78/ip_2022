@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ ugolky.title }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h2>{{ ugolky.title }}</h2>
+        <img src="{% static ugolky.image %}" alt="" width="50%">
+        <h5>{{ ugolky.description}}</h5>
+        <h2>{{ ugolky.price }}</h2>
+        <a href="{% url 'catalog' %}" class="btn btn-outline-primary">В каталог</a>
+    </div>
+{% endblock%}

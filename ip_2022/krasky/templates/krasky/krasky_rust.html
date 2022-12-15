@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ krasky_rust.title }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1 class="display-3">Краска 3в1 по ржавчине</h1>
+    <div class="wrapper">
+        {% for elem in data_3 %}
+        <div class="alert alert-warning">
+            <h5 class="row d-block"> {{ elem.title }} </h5>
+            <a href="{% url 'krasky_rust_detail' elem.id %}" class="btn btn-info">Подробнее</a>
+        </div>
+        {% endfor%}
+    </div>
+
+    <a href="{% url 'krasky_pf' %}">
+        <button class="btn btn-outline-primary">Назад</button>
+    </a>
+
+</div>
+
+{% endblock%}

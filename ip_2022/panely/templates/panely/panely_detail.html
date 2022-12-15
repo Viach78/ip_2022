@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ panely_pvh.title }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h2>{{ panely_pvh.title }}</h2>
+        <img src="{% static panely_pvh.image %}" alt="" width="30%">
+        <h5>{{ panely_pvh.description}}</h5>
+        <h2>{{ panely_pvh.price }}</h2>
+        <a href="{% url 'pvh_bel' %}" class="btn btn-outline-primary">Назад</a>
+    </div>
+{% endblock%}

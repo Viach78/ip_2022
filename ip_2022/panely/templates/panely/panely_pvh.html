@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>Панели и углы</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="features">
+    <h1 class="display-1">Панели и комплектующие ПВХ</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Пластиковые панели</h4>
+                    <a href="{% url 'pvh_bel' %}" class="btn btn-primary">ПЕРЕЙТИ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Комплектующие к ПВХ панелям</h4>
+                    <a href="{% url 'complect_pvh' %}" class="btn btn-primary">ПЕРЕЙТИ</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <a href="{% url 'catalog' %}" class="btn btn-warning">В каталог</a>
+</div>
+
+{% endblock%}

@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+<div class="features">
+    <h1 class="display-3">ПАНЕЛИ</h1>
+        {% for el in data %}
+            <div class="alert alert-warning">
+                <h4 class="row d-block"> {{ el.title }} </h4>
+                <a href="{% url 'panely_detail' el.id %}" class="btn btn-info">Подробнее</a>
+            </div>
+        {% endfor%}
+    <a href="{% url 'panely_pvh' %}"><button class="btn btn-outline-primary">Назад</button></a>
+
+</div>
+
+{% endblock%}

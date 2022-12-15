@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1 class="display-3">Комплектующие ПВХ</h1>
+        {% for el in data_2 %}
+            <div class="alert alert-warning">
+                <h4 class="row d-block"> {{ el.title }} </h4>
+
+                <a href="{% url 'complect_pvh_detail' el.id %}" class="btn btn-info">Подробнее</a>
+            </div>
+        {% endfor%}
+    <a href="{% url 'panely_pvh' %}"><button class="btn btn-outline-primary">Назад</button></a>
+
+</div>
+
+{% endblock%}

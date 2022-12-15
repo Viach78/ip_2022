@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>Краски</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="features">
+    <h1 class="display-1">Краски и Эмали</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Краски водоэмульсионные</h4>
+                    <p class="card-text">Краски для внутренних и наружных работ.</p>
+                    <a href="{% url 'krasky_vd' %}" class="btn btn-primary">ПЕРЕЙТИ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Эмали 3в1 и Аэрозоли</h4>
+                    <p class="card-text">Эмали по ржавчине и краски в баллонах.</p>
+                    <a href="{% url 'krasky_pf' %}" class="btn btn-primary">ПЕРЕЙТИ</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <a href="{% url 'catalog' %}" class="btn btn-warning">В каталог</a>
+</div>
+
+{% endblock%}

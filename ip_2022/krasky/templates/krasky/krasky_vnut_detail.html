@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ krasky_vnut.title }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h2>{{ krasky_vnut.title }}</h2>
+        <img src="{% static krasky_vnut.image %}" alt="" width="25%">
+        <h5>{{ krasky_vnut.description}}</h5>
+        <h2>{{ krasky_vnut.price }}</h2>
+        <a href="{% url 'krasky_vnut' %}" class="btn btn-outline-primary">Назад</a>
+    </div>
+{% endblock%}

@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ krasky_aero.title }}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="features">
+    <h1 class="display-1">Эмали 3в1 и Аэрозоли</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Эмали 3в1 по ржавчине</h4>
+                    <a href="{% url 'krasky_rust' %}" class="btn btn-primary">ПЕРЕЙТИ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Эмали аэрозольные</h4>
+                    <a href="{% url 'krasky_aero' %}" class="btn btn-primary">ПЕРЕЙТИ</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <a href="{% url 'krasky' %}" class="btn btn-warning">Назад</a>
+</div>
+
+{% endblock%}

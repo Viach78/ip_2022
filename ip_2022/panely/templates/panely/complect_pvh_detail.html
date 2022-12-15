@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+<h1>{{ complect_pvh.title }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h2>{{ complect_pvh.title }}</h2>
+        <img src="{% static complect_pvh.image %}" alt="" width="30%">
+        <h5>{{ complect_pvh.description}}</h5>
+        <h2>{{ complect_pvh.price }}</h2>
+        <a href="{% url 'complect_pvh' %}" class="btn btn-outline-primary">Назад</a>
+    </div>
+{% endblock%}
